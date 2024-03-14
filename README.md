@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://github.com/marketplace/actions/docker-stack-deploy-action">
-    <img alt="GitHub Pages Deploy Action Logo" width="200px" src="https://raw.githubusercontent.com/kitconcept/docker-stack-deploy/main/docs/icon.png">
+    <img alt="GitHub Pages Deploy Action Logo" width="200px" src="https://raw.githubusercontent.com/SoftPearAI/docker-stack-deploy/main/docs/icon.png">
   </a>
 </p>
 
@@ -11,10 +11,10 @@
 <div align="center">
 
 [![GitHub Actions Marketplace](https://img.shields.io/badge/action-marketplace-blue.svg?logo=github&color=orange)](https://github.com/marketplace/actions/docker-stack-deploy-action)
-[![Release version badge](https://img.shields.io/github/v/release/kitconcept/docker-stack-deploy)](https://github.com/kitconcept/docker-stack-deploy/releases)
+[![Release version badge](https://img.shields.io/github/v/release/SoftPearAI/docker-stack-deploy)](https://github.com/kitconcept/docker-stack-deploy/releases)
 
-![GitHub Repo stars](https://img.shields.io/github/stars/kitconcept/docker-stack-deploy?style=flat-square)
-[![license badge](https://img.shields.io/github/license/kitconcept/docker-stack-deploy)](./LICENSE)
+![GitHub Repo stars](https://img.shields.io/github/stars/SoftPearAI/docker-stack-deploy?style=flat-square)
+[![license badge](https://img.shields.io/github/license/SoftPearAI/docker-stack-deploy)](./LICENSE)
 
 </div>
 
@@ -66,7 +66,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Deploy
-        uses: kitconcept/docker-stack-deploy@v1.0.1
+        uses: SoftPearAI/docker-stack-deploy@v1.0.1
         with:
           remote_host: ${{ secrets.REMOTE_HOST }}
           remote_user: ${{ secrets.REMOTE_USER }}
@@ -96,7 +96,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Deploy
-        uses: kitconcept/docker-stack-deploy@v1.0.1
+        uses: SoftPearAI/docker-stack-deploy@v1.0.1
         with:
           registry: "ghcr.io"
           username: ${{ secrets.GHCR_USERNAME }}
@@ -138,7 +138,7 @@ docker run --rm
   -v /var/run/docker.sock:/var/run/docker.sock
   --env-file=.env_deploy
   -e REMOTE_PRIVATE_KEY="$(cat ~/.ssh/id_rsa)"
-  ghcr.io/kitconcept/docker-stack-deploy:latest
+  ghcr.io/SoftPearAI/docker-stack-deploy:latest
 ```
 
 #### GitLab CI
@@ -168,7 +168,7 @@ deploy:
     REMOTE_PRIVATE_KEY: "${DEPLOY_KEY}"
     STACK_FILE: stacks/app.yml
     STACK_NAME: app
-    DEPLOY_IMAGE: ghcr.io/kitconcept/docker-stack-deploy:latest
+    DEPLOY_IMAGE: ghcr.io/SoftPearAI/docker-stack-deploy:latest
   script:
     - docker pull ${DEPLOY_IMAGE}
     - docker run --rm
@@ -190,9 +190,9 @@ deploy:
 
 ## Contribute
 
-- [Issue Tracker](https://github.com/kitconcept/docker-stack-deploy/issues)
-- [Source Code](https://github.com/kitconcept/docker-stack-deploy/)
-- [Documentation](https://github.com/kitconcept/docker-stack-deploy/)
+- [Issue Tracker](https://github.com/SoftPearAI/docker-stack-deploy/issues)
+- [Source Code](https://github.com/SoftPearAI/docker-stack-deploy/)
+- [Documentation](https://github.com/SoftPearAI/docker-stack-deploy/)
 
 Please **DO NOT** commit to version branches directly. Even for the smallest and most trivial fix.
 

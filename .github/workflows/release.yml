@@ -8,7 +8,7 @@ on:
       - 'v*.*.*'
 
 env:
-  IMAGE_NAME: ghcr.io/SoftPearAI/docker-stack-deploy
+  IMAGE_NAME: ghcr.io/softpearai/docker-stack-deploy
 
 jobs:
 

@@ -55,7 +55,7 @@ inputs:
     default: "0"
 runs:
   using: 'docker'
-  image: 'docker://ghcr.io/SoftPearAI/docker-stack-deploy:latest'
+  image: 'docker://ghcr.io/softpearai/docker-stack-deploy:latest'
   env:
     REGISTRY: ${{ inputs.registry }}
     USERNAME: ${{ inputs.username }}
